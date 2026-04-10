@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redis Socket Counter</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Redis Counter</h1>
+      <div class="value" id="value">—</div>
+
+      <div class="row">
+        <button id="dec">-1</button>
+        <button id="inc">+1</button>
+      </div>
+
+      <div class="row">
+        <input id="setValue" type="number" step="1" placeholder="Set value…" />
+        <button id="setBtn">Set</button>
+      </div>
+
+      <div class="hint" id="status">Disconnected</div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
