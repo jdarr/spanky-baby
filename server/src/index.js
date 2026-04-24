@@ -27,10 +27,6 @@ async function incrCounter() {
   return await redis.incr(REDIS_KEY);
 }
 
-async function decrCounter() {
-  return await redis.decr(REDIS_KEY);
-}
-
 const httpServer = http.createServer((req, res) => {
   if (req.url === "/health") {
     res.writeHead(200, { "content-type": "application/json" });
@@ -61,11 +57,6 @@ io.on("connection", async (socket) => {
 
   socket.on("counter:inc", async () => {
     const value = await incrCounter();
-    io.emit("counter:value", { value });
-  });
-
-  socket.on("counter:dec", async () => {
-    const value = await decrCounter();
     io.emit("counter:value", { value });
   });
 });

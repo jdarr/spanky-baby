@@ -3,24 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redis Socket Counter</title>
+    <title>Spank Baby Trump</title>
   </head>
   <body>
-    <div id="app">
-      <h1>Redis Counter</h1>
-      <div class="value" id="value">—</div>
+    <div id="app" style="transition: opacity 0.5s ease-out 0.5s; opacity: 0;">
+			<div class="outer">
+				<div class="top-section">
+					<div class="heading">
+						<img src="/svg/heading.svg" alt="	Spank Baby Trump" />
+					</div>
+					<div class="text-wrapper">
+						<div id="world2" class="text back">0</div>
+						<div id="world1" class="text front">0</div>
+					</div>
+					<div class="spanks-worldwide">Spanks WorldWide</div>
+				</div>
 
-      <div class="row">
-        <button id="dec">-1</button>
-        <button id="inc">+1</button>
-      </div>
+				<div class="middle-section">
+					<canvas id="spankCanvas"></canvas>
+				</div>
 
-      <div class="row">
-        <input id="setValue" type="number" step="1" placeholder="Set value…" />
-        <button id="setBtn">Set</button>
-      </div>
+				<div class="bottom-section">
+					<div class="my-spanks">My Spanks:</div>
+					<div class="text-wrapper alt">
+						<div id="current2" class="text back">0</div>
+						<div id="current1" class="text front">0</div>
+					</div>
+				</div>
 
-      <div class="hint" id="status">Disconnected</div>
+			</div>
+			
     </div>
 
     <script type="module" src="/src/main.js"></script>
